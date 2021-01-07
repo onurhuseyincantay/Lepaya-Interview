@@ -1,0 +1,59 @@
+//////////////////////ESSAY///////////////////////////////
+
+ We want to check our trainers' list on mobile and be able to update it.
+ For testing purposes, we are going to use a JSON file inside the app Bundle with a bunch of trainers data created randomly.
+ 
+ -§- TrainerListViewController -§-
+
+ We decided to show the trainer array in a UITableView, and for each trainer show:
+ - name
+ - availability
+ - picture
+ - email
+ 
+When the user selects a trainer from the list by tapping on the UITableViewCell the TrainerDetailsViewController will open.
+ 
+ -§- TrainerDetailsViewController -§-
+ 
+ Inside the TrainerDetailsViewController the user can see the following info of the trainer:
+ - picture
+ - name
+ - age
+ - email
+ - availability
+ - tags
+ - about
+ - favoriteFruit
+ 
+ The user is then allowed to edit the following trainer parameters:
+ - name
+ - email
+ - favorite fruit
+ - availability
+ - about 
+ 
+ When the user hit the back button,
+ the data in the UITableView update accordingly.
+ 
+ UserInterface:
+ Feel free to express your self with UI, decide where to put each element, only be sure to respect functionalities guidelines.
+ 
+ Mandatory:
+ - Do not use storyboard or XIB, build the UI using Swift code (UIKit).
+ - The project must compile
+ - You have to submit your final version after 72h since you receive this project
+ - The UI must adapt to different iPhone sizes
+ - Write organised and reusable code
+ - UITableView with trainers should scroll smoothly
+
+ Optional:
+ - You can use pods
+ 
+Bonus points:
+ - The user is able to sort trainers by name and bornDate in the TrainerListViewController.
+ - The user can add and remove tags to the trainer inside the TrainerDetailsViewController.
+ - During the first run of the application save the trainers data locally and save any change done in the TrainerDetailsViewController.
+ On any next run read data from local file and not from the Bundle.
+ 
+ If you have any questions, feel free to contact me by e-mail (alessio@lepaya.com), I will do my best to answer as quickly as possible.
+ 
