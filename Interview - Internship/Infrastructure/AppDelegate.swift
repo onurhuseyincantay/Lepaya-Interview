@@ -12,24 +12,23 @@ import UIKit
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         setupWindow()
         return true
     }
 }
 
-
 // MARK: - Private
 private extension AppDelegate {
-  
   func setupWindow() {
-    let trainerListViewController = TrainerListViewController()
+    let trainerListViewController = TrainerListViewController(view: TrainerListView(),
+                                                              viewModel: TrainerListViewModel())
     let navigationController = UINavigationController(rootViewController: trainerListViewController)
     self.window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
   }
 }
-
