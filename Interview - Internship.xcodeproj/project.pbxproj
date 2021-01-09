@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F4A964425A99D3700A01321 /* TrainerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A964325A99D3700A01321 /* TrainerList.swift */; };
 		CA097FC0222ED98600D54ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097FBF222ED98600D54ADA /* AppDelegate.swift */; };
 		CA097FC2222ED98600D54ADA /* TrainerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */; };
 		CA097FC7222ED98800D54ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA097FC6222ED98800D54ADA /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F4A964325A99D3700A01321 /* TrainerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerList.swift; sourceTree = "<group>"; };
 		CA097FBC222ED98600D54ADA /* Trainers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA097FBF222ED98600D54ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F4A963925A99B0C00A01321 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				8F4A963A25A99B2300A01321 /* Resources */,
+				CA097FD3222ED9A700D54ADA /* Data */,
+				CAB9512123E4466400F0833E /* Read.me */,
+				CA097FBF222ED98600D54ADA /* AppDelegate.swift */,
+				CA63A14E23E328D00036031C /* LaunchScreen.storyboard */,
+				CA097FCB222ED98800D54ADA /* Info.plist */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		8F4A963A25A99B2300A01321 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA097FC6222ED98800D54ADA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8F4A963D25A99B9A00A01321 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CA097FD4222EDA1400D54ADA /* JSONReader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8F4A963F25A99C8D00A01321 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8F4A964025A99C9500A01321 /* Trainer */,
+				8F4A964125A99CAB00A01321 /* TrainerDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8F4A964025A99C9500A01321 /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */,
+			);
+			path = Trainer;
+			sourceTree = "<group>";
+		};
+		8F4A964125A99CAB00A01321 /* TrainerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CAB9511F23E434AB00F0833E /* TrainerDetailsViewController.swift */,
+			);
+			path = TrainerDetail;
+			sourceTree = "<group>";
+		};
+		8F4A964225A99D1F00A01321 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F4A964325A99D3700A01321 /* TrainerList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		CA097FB3222ED98600D54ADA = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +124,10 @@
 		CA097FBE222ED98600D54ADA /* Interview - Internship */ = {
 			isa = PBXGroup;
 			children = (
-				CA097FD3222ED9A700D54ADA /* Data */,
-				CAB9512123E4466400F0833E /* Read.me */,
-				CA097FBF222ED98600D54ADA /* AppDelegate.swift */,
-				CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */,
-				CAB9511F23E434AB00F0833E /* TrainerDetailsViewController.swift */,
-				CA63A14E23E328D00036031C /* LaunchScreen.storyboard */,
-				CA097FC6222ED98800D54ADA /* Assets.xcassets */,
-				CA097FCB222ED98800D54ADA /* Info.plist */,
+				8F4A963925A99B0C00A01321 /* Infrastructure */,
+				8F4A963F25A99C8D00A01321 /* Scenes */,
+				8F4A964225A99D1F00A01321 /* Model */,
+				8F4A963D25A99B9A00A01321 /* Services */,
 			);
 			path = "Interview - Internship";
 			sourceTree = "<group>";
@@ -76,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				CA097FD1222ED9A000D54ADA /* trainers.json */,
-				CA097FD4222EDA1400D54ADA /* JSONReader.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -154,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4A964425A99D3700A01321 /* TrainerList.swift in Sources */,
 				CA097FC2222ED98600D54ADA /* TrainerListViewController.swift in Sources */,
 				CA097FD5222EDA1400D54ADA /* JSONReader.swift in Sources */,
 				CA097FC0222ED98600D54ADA /* AppDelegate.swift in Sources */,
@@ -285,7 +345,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6WL23MB2S;
-				INFOPLIST_FILE = "Interview - Internship/Info.plist";
+				INFOPLIST_FILE = "Interview - Internship/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lepaya.Interview---Internship";
 				PRODUCT_NAME = Trainers;
@@ -300,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6WL23MB2S;
-				INFOPLIST_FILE = "Interview - Internship/Info.plist";
+				INFOPLIST_FILE = "Interview - Internship/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lepaya.Interview---Internship";
 				PRODUCT_NAME = Trainers;
