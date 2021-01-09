@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TrainerDetailsViewController: UIViewController{
+final class TrainerDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,12 +15,10 @@ final class JSONReader {
   }
   
   func decodeJsonToObject<T: Decodable>(jsonName: String) throws -> T {
-    
     guard let path = Bundle.main.path(forResource: jsonName, ofType: "json"),
           let data = try? Data(contentsOf: URL.init(fileURLWithPath: path)) else {
       throw Error.missingFile(jsonName + ".json")
     }
-    
     do {
       return try JSONDecoder().decode(T.self, from: data)
     } catch {

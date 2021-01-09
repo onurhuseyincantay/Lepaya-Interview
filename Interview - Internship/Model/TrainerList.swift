@@ -13,28 +13,35 @@ typealias TrainerList = [Trainer]
 
 // MARK: - Trainer
 struct Trainer: Decodable {
-    let index: Int
-    let guid: String
-    let isAvailable: Bool
-    let picture: String
-    let name: Name
-    let email, about, bornDate: String
-    let tags: [String]
-    let favoriteFruit: FruitType
+  let index: Int
+  let guid: String
+  let isAvailable: Bool
+  let pictureURL: URL
+  let name: Name
+  let email, about, bornDate: String
+  let tags: [String]
+  let favoriteFruitType: FruitType
+  // MARK: Computed Properties
+  var fullName: String { "\(name.first) \(name.last)" }
+  
+  enum CodingKeys: String, CodingKey {
+    case index, guid, isAvailable, name, email, about, bornDate, tags
+    case favoriteFruitType = "favoriteFruit"
+    case pictureURL = "picture"
+  }
 }
 
 // MARK: - FruitType
 enum FruitType: String, Decodable {
-    case apple = "apple"
-    case avocado = "avocado"
-    case banana = "banana"
-    case mango = "mango"
-    case strawberry = "strawberry"
-    case watermelon = "watermelon"
+  case apple
+  case avocado
+  case banana
+  case mango
+  case strawberry
+  case watermelon
 }
 
 // MARK: - Name
 struct Name: Decodable {
-    let first, last: String
+  let first, last: String
 }
-
