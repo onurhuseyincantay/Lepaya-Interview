@@ -43,6 +43,10 @@ extension TrainerListViewController: TrainerListViewDelegate {
   
   func didSelectRow(at indexPath: IndexPath) {
     let trainer = viewModel.selectTrainer(at: indexPath)
+    guard trainer.isAvailable else {
+      showNotAvailableAlert()
+      return
+    }
     routeToTrainerViewController(with: trainer)
   }
 }
@@ -53,5 +57,14 @@ private extension TrainerListViewController {
   
   func routeToTrainerViewController(with trainer: Trainer) {
     
+  }
+  
+  func showNotAvailableAlert() {
+    let title = Localizer.localize(key: "TrainerNotAvailableAlertTitle")
+    let message = Localizer.localize(key: "TrainerNotAvailableAlertMessage")
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let actionTitle = Localizer.localize(key: "OkayButtonTitle")
+    alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
+    present(alert, animated: true, completion: nil)
   }
 }

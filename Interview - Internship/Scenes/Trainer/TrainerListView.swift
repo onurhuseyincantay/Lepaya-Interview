@@ -14,7 +14,7 @@ protocol TrainerListViewDelegate: class {
 
 final class TrainerListView: BaseView {
   weak var delegate: TrainerListViewDelegate?
-  private var dataSource: TrainerList = []
+  private var dataSource: TrainerDataSource = []
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -40,7 +40,7 @@ final class TrainerListView: BaseView {
 // MARK: - Public Functions
 extension TrainerListView {
   
-  func updateDataSource(dataSource: TrainerList) {
+  func updateDataSource(dataSource: TrainerDataSource) {
     self.dataSource = dataSource
     tableView.reloadData()
   }

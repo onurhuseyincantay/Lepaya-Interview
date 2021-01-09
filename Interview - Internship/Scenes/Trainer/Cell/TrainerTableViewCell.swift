@@ -14,6 +14,7 @@ final class TrainerTableViewCell: UITableViewCell {
     static let defaultPadding: CGFloat = 8
     static let profileImageViewHeight: CGFloat = 50
     static let cardViewCornerRadius: CGFloat = 5
+    static let stackViewSpacing: CGFloat = 4
   }
   
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -66,22 +67,22 @@ final class TrainerTableViewCell: UITableViewCell {
     stackView.axis = .vertical
     stackView.alignment = .fill
     stackView.distribution = .fillProportionally
-    stackView.spacing = 4
+    stackView.spacing = ViewTraits.stackViewSpacing
     return stackView
   }()
 }
 
+
 // MARK: Public Functions
 extension TrainerTableViewCell {
   
-  func updateUI(with trainer: Trainer) {
-    nameLabel.text = trainer.fullName
-    emailLabel.text = trainer.email
-    profileImageView.setCachedImage(from: trainer.pictureURL,
+  func updateUI(with model: TrainerCellModel) {
+    nameLabel.text = model.fullname
+    emailLabel.text = model.email
+    profileImageView.setCachedImage(from: model.profilePictureURL,
                                                    placeholder: ImageHelper.personImage,
                                                    isTemplate: false)
-    profileImageView.layer.borderColor = trainer.isAvailable ? ColorHelper.trainerAvailable.cgColor : ColorHelper.trainerUnAvailable.cgColor
-    isUserInteractionEnabled = trainer.isAvailable
+    profileImageView.layer.borderColor = model.isAvailable ? ColorHelper.trainerAvailable.cgColor : ColorHelper.trainerUnAvailable.cgColor
   }
 }
 

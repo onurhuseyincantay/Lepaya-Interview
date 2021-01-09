@@ -11,7 +11,7 @@ import Foundation
 protocol TrainerListViewModelProtocol {
   
   /// Loads Trainers from Datasource
-  func loadTrainer() -> TrainerList
+  func loadTrainer() -> TrainerDataSource
   
   func selectTrainer(at indexPath: IndexPath) -> Trainer
 }
@@ -23,12 +23,13 @@ final class TrainerListViewModel {
 // MARK: - TrainerListViewModelProtocol
 extension TrainerListViewModel: TrainerListViewModelProtocol {
   
-  func loadTrainer() -> TrainerList {
+  func loadTrainer() -> TrainerDataSource {
     let jsonReader = JSONReader()
     // normally force unwrap wouldnt be the case but since we are using local files to load data I didnt want to have code noise
     // swiftlint:disable:next force_try
     trainerList = try! jsonReader.decodeJsonToObject(jsonName: "trainers")
-    return trainerList
+    let dataSource = trainerList.map { TrainerCellModel(fullname: $0.fullName, email: $0.email, profilePictureURL: $0.pictureURL, isAvailable: $0.isAvailable) }
+    return dataSource
   }
   
   func selectTrainer(at indexPath: IndexPath) -> Trainer {

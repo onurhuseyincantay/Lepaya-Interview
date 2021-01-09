@@ -20,7 +20,7 @@ extension UIImageView {
   func setCachedImage(from url: URL, placeholder: UIImage?, isTemplate: Bool) -> URLSessionDataTask? {
     updateImage(with: placeholder, isTemplate: isTemplate)
     
-    guard let image = imageCache.object(forKey: url.lastPathComponent as NSString) else {
+    guard let image = imageCache.object(forKey: url.absoluteString as NSString) else {
       return downloadImage(from: url, placeholder: placeholder, isTemplate: isTemplate)
     }
     
@@ -49,7 +49,7 @@ private extension UIImageView {
       }
       
       self.updateImage(with: image, isTemplate: isTemplate)
-      imageCache.setObject(image, forKey: url.lastPathComponent as NSString)
+      imageCache.setObject(image, forKey: url.absoluteString as NSString)
     }
     dataTask.resume()
     return dataTask

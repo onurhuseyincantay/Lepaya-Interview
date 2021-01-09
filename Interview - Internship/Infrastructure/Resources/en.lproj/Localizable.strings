@@ -1,1 +1,8 @@
 "TrainerListViewControllerTitle" = "Trainers";
+
+"TrainerNotAvailableAlertTitle" = "Trainer Not Available";
+
+"TrainerNotAvailableAlertMessage" = "Trainer is currently busy please check again later.";
+
+"OkayButtonTitle" = "Okay";
+
