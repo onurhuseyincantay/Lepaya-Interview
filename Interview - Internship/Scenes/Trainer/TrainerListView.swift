@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TrainerListViewDelegate: class {
+protocol TrainerListViewDelegate: TrainerListViewController {
   func didSelectRow(at indexPath: IndexPath)
 }
 
@@ -55,6 +55,7 @@ extension TrainerListView: UITableViewDelegate {
   }
 }
 
+
 // MARK: - UITableViewDataSource
 extension TrainerListView: UITableViewDataSource {
   
@@ -68,20 +69,14 @@ extension TrainerListView: UITableViewDataSource {
     }
     let trainer = dataSource[indexPath.row]
     cell.updateUI(with: trainer)
-  
     return cell
   }
-}
-
-// MARK: - Private
-private extension TrainerListView {
-
 }
 
 // MARK: - Constraints
 private extension TrainerListView {
   func addSubviews() {
-    addSubviewWithoutConstraints(view: tableView)
+    addSubviewWithoutConstraints(tableView)
   }
   
   func setupConstraints() {

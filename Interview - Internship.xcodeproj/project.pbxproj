@@ -21,6 +21,8 @@
 		8F96C7EC25A9B2F000B6853C /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7EB25A9B2F000B6853C /* UIImageView+Additions.swift */; };
 		8F96C7EF25A9BFBF00B6853C /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7EE25A9BFBF00B6853C /* ImageHelper.swift */; };
 		8F96C7F225A9F26400B6853C /* TrainerCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7F125A9F26300B6853C /* TrainerCellModel.swift */; };
+		8F96C7F825A9F8CF00B6853C /* TrainerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7F725A9F8CF00B6853C /* TrainerDetailsView.swift */; };
+		8F96C7FB25A9F8DE00B6853C /* TrainerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7FA25A9F8DE00B6853C /* TrainerDetailsViewModel.swift */; };
 		CA097FC0222ED98600D54ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097FBF222ED98600D54ADA /* AppDelegate.swift */; };
 		CA097FC2222ED98600D54ADA /* TrainerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */; };
 		CA097FC7222ED98800D54ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA097FC6222ED98800D54ADA /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		8F96C7EB25A9B2F000B6853C /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
 		8F96C7EE25A9BFBF00B6853C /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		8F96C7F125A9F26300B6853C /* TrainerCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerCellModel.swift; sourceTree = "<group>"; };
+		8F96C7F725A9F8CF00B6853C /* TrainerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailsView.swift; sourceTree = "<group>"; };
+		8F96C7FA25A9F8DE00B6853C /* TrainerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailsViewModel.swift; sourceTree = "<group>"; };
 		CA097FBC222ED98600D54ADA /* Trainers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA097FBF222ED98600D54ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +128,9 @@
 		8F4A964125A99CAB00A01321 /* TrainerDetail */ = {
 			isa = PBXGroup;
 			children = (
+				8F96C7F725A9F8CF00B6853C /* TrainerDetailsView.swift */,
 				CAB9511F23E434AB00F0833E /* TrainerDetailsViewController.swift */,
+				8F96C7FA25A9F8DE00B6853C /* TrainerDetailsViewModel.swift */,
 			);
 			path = TrainerDetail;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F96C7F825A9F8CF00B6853C /* TrainerDetailsView.swift in Sources */,
 				8F96C7CF25A9A67800B6853C /* UIView+Additions.swift in Sources */,
 				8F96C7C425A9A2A700B6853C /* TrainerListView.swift in Sources */,
 				8F96C7EC25A9B2F000B6853C /* UIImageView+Additions.swift in Sources */,
@@ -320,6 +327,7 @@
 				CA097FD5222EDA1400D54ADA /* JSONReader.swift in Sources */,
 				8F96C7CB25A9A3DA00B6853C /* TrainerListViewModel.swift in Sources */,
 				8F96C7E825A9B11E00B6853C /* ColorHelper.swift in Sources */,
+				8F96C7FB25A9F8DE00B6853C /* TrainerDetailsViewModel.swift in Sources */,
 				8F96C7EF25A9BFBF00B6853C /* ImageHelper.swift in Sources */,
 				CA097FC0222ED98600D54ADA /* AppDelegate.swift in Sources */,
 				CAB9512023E434AB00F0833E /* TrainerDetailsViewController.swift in Sources */,

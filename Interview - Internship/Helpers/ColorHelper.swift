@@ -12,4 +12,5 @@ enum ColorHelper {
   static let trainerAvailable = UIColor(named: "TrainerAvailableColor")!
   static let trainerUnAvailable = UIColor(named: "TrainerUnavailableColor")!
   static let lepayaBrandBlue = UIColor(named: "LepayaBrandBlue")!
+  static let trainerDetailBackgroundColor = UIColor(named: "TrainerDetailBackgroundColor")!
 }

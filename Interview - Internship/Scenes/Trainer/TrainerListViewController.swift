@@ -44,7 +44,7 @@ extension TrainerListViewController: TrainerListViewDelegate {
   func didSelectRow(at indexPath: IndexPath) {
     let trainer = viewModel.selectTrainer(at: indexPath)
     guard trainer.isAvailable else {
-      showNotAvailableAlert()
+      showNotAvailableAlert(trainer: trainer)
       return
     }
     routeToTrainerViewController(with: trainer)
@@ -52,19 +52,31 @@ extension TrainerListViewController: TrainerListViewDelegate {
 }
 
 
+// MARK: - TrainerDetailsViewControllerDelegate
+extension TrainerListViewController: TrainerDetailsViewControllerDelegate {
+  
+}
+
+
 // MARK: - Routing
 private extension TrainerListViewController {
   
   func routeToTrainerViewController(with trainer: Trainer) {
-    
+    let trainerDetailViewController = TrainerDetailsViewController(view: TrainerDetailsView(), viewModel: TrainerDetailsViewModel(trainer: trainer))
+    trainerDetailViewController.delegate = self
+    navigationController?.pushViewController(trainerDetailViewController, animated: true)
   }
   
-  func showNotAvailableAlert() {
+  func showNotAvailableAlert(trainer: Trainer) {
     let title = Localizer.localize(key: "TrainerNotAvailableAlertTitle")
     let message = Localizer.localize(key: "TrainerNotAvailableAlertMessage")
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    let actionTitle = Localizer.localize(key: "OkayButtonTitle")
-    alert.addAction(UIAlertAction(title: actionTitle, style: .cancel))
+    let okayActionTitle = Localizer.localize(key: "OkayButtonTitle")
+    let cancelActionTitle = Localizer.localize(key: "CancelButtonTitle")
+    alert.addAction(UIAlertAction(title: okayActionTitle, style: .default, handler: { _ in
+      self.routeToTrainerViewController(with: trainer)
+    }))
+    alert.addAction(UIAlertAction(title: cancelActionTitle, style: .destructive))
     present(alert, animated: true, completion: nil)
   }
 }

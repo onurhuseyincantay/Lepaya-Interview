@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Lepaya-logo-PNG-1024x576.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
