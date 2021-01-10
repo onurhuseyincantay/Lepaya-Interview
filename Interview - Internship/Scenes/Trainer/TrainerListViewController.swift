@@ -55,6 +55,10 @@ extension TrainerListViewController: TrainerListViewDelegate {
 // MARK: - TrainerDetailsViewControllerDelegate
 extension TrainerListViewController: TrainerDetailsViewControllerDelegate {
   
+  func updateTrainer(_ trainer: Trainer) {
+    let (indexPath, trainer) = viewModel.updateTrainer(trainer)
+    mainView.updateTrainer(at: indexPath, with: trainer)
+  }
 }
 
 

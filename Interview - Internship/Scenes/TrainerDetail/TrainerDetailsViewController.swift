@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TrainerDetailsViewControllerDelegate: TrainerListViewController {
-  
+  func updateTrainer(_ trainer: Trainer)
 }
 
 final class TrainerDetailsViewController: UIViewController {
@@ -28,6 +28,11 @@ final class TrainerDetailsViewController: UIViewController {
   override func loadView() {
     mainView.delegate = self
     view = mainView
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    passLastTrainerInformation()
   }
   
   @available(*, unavailable)
@@ -66,5 +71,11 @@ private extension TrainerDetailsViewController {
     let cancelButtonTitle = Localizer.localize(key: "CancelButtonTitle")
     alert.addAction(UIAlertAction(title: cancelButtonTitle, style: .cancel))
     present(alert, animated: true)
+  }
+  
+  func passLastTrainerInformation() {
+    let trainerUpdateModel = mainView.getInformation()
+    let trainer = viewModel.updateTrainer(trainerUpdateModel)
+    delegate?.updateTrainer(trainer)
   }
 }

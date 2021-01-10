@@ -15,12 +15,13 @@ typealias TrainerList = [Trainer]
 struct Trainer: Decodable {
   let index: Int
   let guid: String
-  let isAvailable: Bool
+  var isAvailable: Bool
   let pictureURL: URL
   var name: Name
-  var email, about, bornDate: String
+  var email, about: String
+  let bornDate: String
   var tags: [String]
-  let favoriteFruit: String
+  var favoriteFruit: String
   // MARK: Computed Properties
   var fullName: String { "\(name.first) \(name.last)" }
   
@@ -30,7 +31,13 @@ struct Trainer: Decodable {
   }
 }
 
+extension Trainer: Equatable {
+  static func ==( lhs: Trainer, rhs: Trainer) -> Bool {
+    lhs.guid == rhs.guid
+  }
+}
+
 // MARK: - Name
 struct Name: Decodable {
-  let first, last: String
+  var first, last: String
 }

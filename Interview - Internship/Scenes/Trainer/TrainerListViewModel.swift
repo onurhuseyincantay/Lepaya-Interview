@@ -15,6 +15,11 @@ protocol TrainerListViewModelProtocol {
   /// Returns the selected trainer
   /// - Parameter indexPath: ndexpath of the selected cell
   func selectTrainer(at indexPath: IndexPath) -> Trainer
+  
+  
+  /// Updates Existing Trainerr
+  /// - Parameter trainer: Trainer to be update
+  func updateTrainer(_ trainer: Trainer) -> (IndexPath, TrainerCellModel)
 }
 
 final class TrainerListViewModel {
@@ -36,5 +41,15 @@ extension TrainerListViewModel: TrainerListViewModelProtocol {
   
   func selectTrainer(at indexPath: IndexPath) -> Trainer {
     trainerList[indexPath.row]
+  }
+  
+  func updateTrainer(_ trainer: Trainer) -> (IndexPath, TrainerCellModel) {
+    guard let index = trainerList.index(of: trainer) else {
+      fatalError()
+    }
+    trainerList[index] = trainer
+    let trainerCellModel = TrainerCellModel(fullname: trainer.fullName, email: trainer.email, profilePictureURL: trainer.pictureURL, isAvailable: trainer.isAvailable)
+    let indexPath = IndexPath(row: index, section: 0)
+    return (indexPath, trainerCellModel)
   }
 }

@@ -44,6 +44,14 @@ extension TrainerListView {
     self.dataSource = dataSource
     tableView.reloadData()
   }
+  
+  func updateTrainer(at indexPath: IndexPath, with trainer: TrainerCellModel) {
+    dataSource[indexPath.row] = trainer
+    guard let cell = tableView.cellForRow(at: indexPath) as? TrainerTableViewCell else {
+      return
+    }
+    cell.updateUI(with: trainer)
+  }
 }
 
 

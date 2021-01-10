@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F4A964425A99D3700A01321 /* TrainerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4A964325A99D3700A01321 /* TrainerList.swift */; };
+		8F8061E925AB519100D72341 /* TrainersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8061E825AB519100D72341 /* TrainersTests.swift */; };
 		8F96C7C125A9A1C600B6853C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7C025A9A1C600B6853C /* Identifiable.swift */; };
 		8F96C7C425A9A2A700B6853C /* TrainerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7C325A9A2A700B6853C /* TrainerListView.swift */; };
 		8F96C7C825A9A2CB00B6853C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F96C7C725A9A2CB00B6853C /* BaseView.swift */; };
@@ -42,8 +43,21 @@
 		CAB9512223E4466400F0833E /* Read.me in Resources */ = {isa = PBXBuildFile; fileRef = CAB9512123E4466400F0833E /* Read.me */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8F8061EB25AB519100D72341 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA097FB4222ED98600D54ADA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA097FBB222ED98600D54ADA;
+			remoteInfo = "Interview - Internship";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8F4A964325A99D3700A01321 /* TrainerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerList.swift; sourceTree = "<group>"; };
+		8F8061E625AB519100D72341 /* TrainersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8061E825AB519100D72341 /* TrainersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainersTests.swift; sourceTree = "<group>"; };
+		8F8061EA25AB519100D72341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F96C7C025A9A1C600B6853C /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		8F96C7C325A9A2A700B6853C /* TrainerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListView.swift; sourceTree = "<group>"; };
 		8F96C7C725A9A2CB00B6853C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -68,7 +82,7 @@
 		8FDA99A125AB439600E50BC5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		8FDA99A425AB48C100E50BC5 /* TrainerUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerUpdateModel.swift; sourceTree = "<group>"; };
 		8FDA99A825AB495E00E50BC5 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
-		ABB70B5F1D528079BD90AAC4 /* Pods_Interview___Internship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interview___Internship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB70B5F1D528079BD90AAC4 /* Pods_Interview___Internship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Interview___Internship.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA097FBC222ED98600D54ADA /* Trainers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA097FBF222ED98600D54ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +98,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8F8061E325AB519100D72341 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA097FB9222ED98600D54ADA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,7 +122,6 @@
 				DCE576F078C056E3962F40DD /* Pods-Interview - Internship.debug.xcconfig */,
 				ECB06FD5000CF7975473DF96 /* Pods-Interview - Internship.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,10 +191,20 @@
 		8F4A964225A99D1F00A01321 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F96C7F125A9F26300B6853C /* TrainerCellModel.swift */,
 				8F4A964325A99D3700A01321 /* TrainerList.swift */,
 				8FDA99A425AB48C100E50BC5 /* TrainerUpdateModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8F8061E725AB519100D72341 /* TrainersTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F8061E825AB519100D72341 /* TrainersTests.swift */,
+				8F8061EA25AB519100D72341 /* Info.plist */,
+			);
+			path = TrainersTests;
 			sourceTree = "<group>";
 		};
 		8F96C7BF25A9A1A400B6853C /* Helpers */ = {
@@ -209,7 +239,6 @@
 		8F96C7D425A9AC1300B6853C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8F96C7F125A9F26300B6853C /* TrainerCellModel.swift */,
 				8F96C7D525A9AC2500B6853C /* TrainerTableViewCell.swift */,
 			);
 			path = Cell;
@@ -249,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				CA097FBE222ED98600D54ADA /* Interview - Internship */,
+				8F8061E725AB519100D72341 /* TrainersTests */,
 				CA097FBD222ED98600D54ADA /* Products */,
 				8FDA99A725AB495E00E50BC5 /* Frameworks */,
 				462ED7820BCEED69E9128FD3 /* Pods */,
@@ -259,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				CA097FBC222ED98600D54ADA /* Trainers.app */,
+				8F8061E625AB519100D72341 /* TrainersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,6 +318,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8F8061E525AB519100D72341 /* TrainersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F8061ED25AB519100D72341 /* Build configuration list for PBXNativeTarget "TrainersTests" */;
+			buildPhases = (
+				8F8061E225AB519100D72341 /* Sources */,
+				8F8061E325AB519100D72341 /* Frameworks */,
+				8F8061E425AB519100D72341 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F8061EC25AB519100D72341 /* PBXTargetDependency */,
+			);
+			name = TrainersTests;
+			productName = TrainersTests;
+			productReference = 8F8061E625AB519100D72341 /* TrainersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CA097FBB222ED98600D54ADA /* Interview - Internship */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA097FCE222ED98800D54ADA /* Build configuration list for PBXNativeTarget "Interview - Internship" */;
@@ -313,10 +362,15 @@
 		CA097FB4222ED98600D54ADA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Lepaya;
 				TargetAttributes = {
+					8F8061E525AB519100D72341 = {
+						CreatedOnToolsVersion = 12.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CA097FBB222ED98600D54ADA;
+					};
 					CA097FBB222ED98600D54ADA = {
 						CreatedOnToolsVersion = 10.1;
 						ProvisioningStyle = Automatic;
@@ -337,11 +391,19 @@
 			projectRoot = "";
 			targets = (
 				CA097FBB222ED98600D54ADA /* Interview - Internship */,
+				8F8061E525AB519100D72341 /* TrainersTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8F8061E425AB519100D72341 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA097FBA222ED98600D54ADA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +481,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8F8061E225AB519100D72341 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8061E925AB519100D72341 /* TrainersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA097FB8222ED98600D54ADA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,6 +524,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8F8061EC25AB519100D72341 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA097FBB222ED98600D54ADA /* Interview - Internship */;
+			targetProxy = 8F8061EB25AB519100D72341 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8F96C7DF25A9AD1E00B6853C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -466,6 +544,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8F8061EE25AB519100D72341 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4F2B776R3;
+				INFOPLIST_FILE = TrainersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onur.cantay.TrainersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trainers.app/Trainers";
+			};
+			name = Debug;
+		};
+		8F8061EF25AB519100D72341 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B4F2B776R3;
+				INFOPLIST_FILE = TrainersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onur.cantay.TrainersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trainers.app/Trainers";
+			};
+			name = Release;
+		};
 		CA097FCC222ED98800D54ADA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -626,6 +740,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8F8061ED25AB519100D72341 /* Build configuration list for PBXNativeTarget "TrainersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F8061EE25AB519100D72341 /* Debug */,
+				8F8061EF25AB519100D72341 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA097FB7222ED98600D54ADA /* Build configuration list for PBXProject "Interview - Internship" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

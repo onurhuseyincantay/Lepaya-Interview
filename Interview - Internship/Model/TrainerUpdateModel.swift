@@ -9,5 +9,6 @@
 import Foundation
 
 struct TrainerUpdateModel {
-  let name, email, favoriteFruit: String
+  let name, email, favoriteFruit, about: String
+  let isAvailable: Bool
 }

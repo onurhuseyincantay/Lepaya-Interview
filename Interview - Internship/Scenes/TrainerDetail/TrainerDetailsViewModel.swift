@@ -14,6 +14,7 @@ protocol TrainerDetailsViewModelProtocol {
   init(trainer: Trainer)
   func removeTag(at indexPath: IndexPath)
   func addTag(_ tag: String?) -> Bool
+  func updateTrainer(_ model: TrainerUpdateModel) -> Trainer
 }
 
 final class TrainerDetailsViewModel {
@@ -38,5 +39,16 @@ extension TrainerDetailsViewModel: TrainerDetailsViewModelProtocol {
     }
     trainer.tags.append(tag)
     return true
+  }
+  
+  func updateTrainer(_ model: TrainerUpdateModel) -> Trainer {
+    trainer.about = model.about
+    trainer.email = model.email
+    let splittedFullName = model.name.split(separator: " ")
+    trainer.name.first = String(splittedFullName.first ?? "")
+    trainer.name.last = String(splittedFullName.last ?? "")
+    trainer.isAvailable = model.isAvailable
+    trainer.favoriteFruit = model.favoriteFruit
+    return trainer
   }
 }

@@ -17,6 +17,9 @@ protocol TrainerDetailsViewDelegate: TrainerDetailsViewController {
 final class TrainerDetailsView: BaseView {
   weak var delegate: TrainerDetailsViewDelegate?
   
+  private var trainerIsAvailable: Bool {
+    availabilityView.backgroundColor == ColorHelper.trainerAvailable
+  }
   private enum ViewTrait {
     static let companyBrandImageHeight: CGFloat = 150
     static let profileImageViewHeightWidth: CGFloat = 75
@@ -69,12 +72,6 @@ final class TrainerDetailsView: BaseView {
     label.text = "Age:"
     return label
   }()
-  
-  private let ageTextField: UITextField = {
-    let textField = UITextField()
-    return textField
-  }()
-  
   
   private let scrollableView: ScrollableView = {
     let view = ScrollableView()
@@ -178,12 +175,17 @@ extension TrainerDetailsView {
     emailTextField.text = trainer.email
     tagsContainer.provideDataSource(trainer.tags, title: "Tags")
     aboutTextView.text = trainer.about
-    ageTextField.text = DateFormatterHelper.calculateAge(from: trainer.bornDate)
+    ageLabel.text?.append(DateFormatterHelper.calculateAge(from: trainer.bornDate))
     favoriteFruitTextField.text = trainer.favoriteFruit
   }
   
   func removeTag(at indexPath: IndexPath) {
     tagsContainer.removeItem(at: indexPath)
+  }
+  
+  func getInformation() -> TrainerUpdateModel {
+    // I wouldnt force unwrap but these values are already fılled as far as I saw from the data because of tıme limit will leave it like this.
+    TrainerUpdateModel(name: nameTextField.text!, email: emailTextField.text!, favoriteFruit: favoriteFruitTextField.text!, about: aboutTextView.text, isAvailable: self.trainerIsAvailable)
   }
 }
 
@@ -204,9 +206,8 @@ extension TrainerDetailsView: TagsContainerViewDelegate {
 @objc extension TrainerDetailsView {
   
   func didPressProfilePicture() {
-    let isAvailable = availabilityView.backgroundColor == ColorHelper.trainerAvailable
     UIView.animate(withDuration: 0.5) {
-      self.availabilityView.backgroundColor = isAvailable ? ColorHelper.trainerUnAvailable : ColorHelper.trainerAvailable
+      self.availabilityView.backgroundColor = self.trainerIsAvailable ? ColorHelper.trainerUnAvailable : ColorHelper.trainerAvailable
     }
   }
 }
@@ -229,7 +230,6 @@ private extension TrainerDetailsView {
     containerView.addSubviewWithoutConstraints(favoriteFruitLabel)
     containerView.addSubviewWithoutConstraints(favoriteFruitTextField)
     containerView.addSubviewWithoutConstraints(ageLabel)
-    containerView.addSubviewWithoutConstraints(ageTextField)
   }
   
   func setupConstraints() {
@@ -291,11 +291,7 @@ private extension TrainerDetailsView {
       
       ageLabel.topAnchor.constraint(equalTo: favoriteFruitLabel.bottomAnchor, constant: ViewTrait.defaultVerticalPadding),
       ageLabel.leadingAnchor.constraint(equalTo: favoriteFruitLabel.leadingAnchor),
-      
-      ageTextField.topAnchor.constraint(equalTo: ageLabel.topAnchor),
-      ageTextField.leadingAnchor.constraint(equalTo: ageLabel.trailingAnchor),
-      ageTextField.trailingAnchor.constraint(equalTo: aboutTextView.trailingAnchor),
-      ageTextField.bottomAnchor.constraint(equalTo: scrollableView.containerView.bottomAnchor, constant: -ViewTrait.defaultVerticalPadding)
+      ageLabel.bottomAnchor.constraint(equalTo: scrollableView.containerView.bottomAnchor, constant: -ViewTrait.defaultVerticalPadding)
     ])
   }
   
@@ -314,7 +310,8 @@ private extension TrainerDetailsView {
     ])
   }
   
-  func animateTagInputContainerView(isExpanding: Bool = true, completion: ((Bool) -> Void)? = nil)  {
+  func animateTagInputContainerView(isExpanding: Bool = true,
+                                    completion: ((Bool) -> Void)? = nil)  {
     inputContainerViewTopConstraint?.priority = isExpanding ? .defaultLow : .defaultHigh
     inputContainerViewBottomConstraint?.priority = isExpanding ? .defaultHigh : .defaultLow
     UIView.animate(withDuration: 0.5, animations: {
