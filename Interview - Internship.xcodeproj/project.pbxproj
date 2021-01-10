@@ -30,6 +30,8 @@
 		8FDA999825AB1CF300E50BC5 /* SelfSizedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA999725AB1CF300E50BC5 /* SelfSizedCollectionView.swift */; };
 		8FDA999F25AB34C700E50BC5 /* TagInputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA999E25AB34C700E50BC5 /* TagInputContainerView.swift */; };
 		8FDA99A225AB439600E50BC5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA99A125AB439600E50BC5 /* DateFormatter.swift */; };
+		8FDA99A525AB48C100E50BC5 /* TrainerUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA99A425AB48C100E50BC5 /* TrainerUpdateModel.swift */; };
+		979173DB8FC2EE92DAF88D7F /* Pods_Interview___Internship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB70B5F1D528079BD90AAC4 /* Pods_Interview___Internship.framework */; };
 		CA097FC0222ED98600D54ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097FBF222ED98600D54ADA /* AppDelegate.swift */; };
 		CA097FC2222ED98600D54ADA /* TrainerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */; };
 		CA097FC7222ED98800D54ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA097FC6222ED98800D54ADA /* Assets.xcassets */; };
@@ -64,6 +66,9 @@
 		8FDA999725AB1CF300E50BC5 /* SelfSizedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedCollectionView.swift; sourceTree = "<group>"; };
 		8FDA999E25AB34C700E50BC5 /* TagInputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagInputContainerView.swift; sourceTree = "<group>"; };
 		8FDA99A125AB439600E50BC5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		8FDA99A425AB48C100E50BC5 /* TrainerUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerUpdateModel.swift; sourceTree = "<group>"; };
+		8FDA99A825AB495E00E50BC5 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
+		ABB70B5F1D528079BD90AAC4 /* Pods_Interview___Internship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interview___Internship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA097FBC222ED98600D54ADA /* Trainers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trainers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA097FBF222ED98600D54ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA097FC1222ED98600D54ADA /* TrainerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerListViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +79,8 @@
 		CA63A14E23E328D00036031C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB9511F23E434AB00F0833E /* TrainerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerDetailsViewController.swift; sourceTree = "<group>"; };
 		CAB9512123E4466400F0833E /* Read.me */ = {isa = PBXFileReference; lastKnownFileType = text; path = Read.me; sourceTree = "<group>"; };
+		DCE576F078C056E3962F40DD /* Pods-Interview - Internship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interview - Internship.debug.xcconfig"; path = "Target Support Files/Pods-Interview - Internship/Pods-Interview - Internship.debug.xcconfig"; sourceTree = "<group>"; };
+		ECB06FD5000CF7975473DF96 /* Pods-Interview - Internship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interview - Internship.release.xcconfig"; path = "Target Support Files/Pods-Interview - Internship/Pods-Interview - Internship.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979173DB8FC2EE92DAF88D7F /* Pods_Interview___Internship.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		462ED7820BCEED69E9128FD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCE576F078C056E3962F40DD /* Pods-Interview - Internship.debug.xcconfig */,
+				ECB06FD5000CF7975473DF96 /* Pods-Interview - Internship.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8F4A963925A99B0C00A01321 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8F4A964325A99D3700A01321 /* TrainerList.swift */,
+				8FDA99A425AB48C100E50BC5 /* TrainerUpdateModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,11 +236,22 @@
 			path = TagsContainerView;
 			sourceTree = "<group>";
 		};
+		8FDA99A725AB495E00E50BC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FDA99A825AB495E00E50BC5 /* IQKeyboardManager.framework */,
+				ABB70B5F1D528079BD90AAC4 /* Pods_Interview___Internship.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA097FB3222ED98600D54ADA = {
 			isa = PBXGroup;
 			children = (
 				CA097FBE222ED98600D54ADA /* Interview - Internship */,
 				CA097FBD222ED98600D54ADA /* Products */,
+				8FDA99A725AB495E00E50BC5 /* Frameworks */,
+				462ED7820BCEED69E9128FD3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -261,10 +291,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA097FCE222ED98800D54ADA /* Build configuration list for PBXNativeTarget "Interview - Internship" */;
 			buildPhases = (
+				E659E6408E5ECE8B20A8B8DB /* [CP] Check Pods Manifest.lock */,
 				CA097FB8222ED98600D54ADA /* Sources */,
 				CA097FB9222ED98600D54ADA /* Frameworks */,
 				CA097FBA222ED98600D54ADA /* Resources */,
 				8F96C7D125A9A91D00B6853C /* Swiftlint */,
+				D16C1EEB5865284F7B5A3CFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +376,46 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		D16C1EEB5865284F7B5A3CFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Interview - Internship/Pods-Interview - Internship-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Interview - Internship/Pods-Interview - Internship-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E659E6408E5ECE8B20A8B8DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Interview - Internship-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -373,6 +445,7 @@
 				8F96C7E825A9B11E00B6853C /* ColorHelper.swift in Sources */,
 				8F96C7FB25A9F8DE00B6853C /* TrainerDetailsViewModel.swift in Sources */,
 				8F96C7EF25A9BFBF00B6853C /* ImageHelper.swift in Sources */,
+				8FDA99A525AB48C100E50BC5 /* TrainerUpdateModel.swift in Sources */,
 				CA097FC0222ED98600D54ADA /* AppDelegate.swift in Sources */,
 				CAB9512023E434AB00F0833E /* TrainerDetailsViewController.swift in Sources */,
 				8F96C7C825A9A2CB00B6853C /* BaseView.swift in Sources */,
@@ -510,31 +583,43 @@
 		};
 		CA097FCF222ED98800D54ADA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE576F078C056E3962F40DD /* Pods-Interview - Internship.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6WL23MB2S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Interview - Internship/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lepaya.Interview---Internship";
 				PRODUCT_NAME = Trainers;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
 		CA097FD0222ED98800D54ADA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECB06FD5000CF7975473DF96 /* Pods-Interview - Internship.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6WL23MB2S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Interview - Internship/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lepaya.Interview---Internship";
 				PRODUCT_NAME = Trainers;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};

@@ -179,7 +179,7 @@ extension TrainerDetailsView {
     tagsContainer.provideDataSource(trainer.tags, title: "Tags")
     aboutTextView.text = trainer.about
     ageTextField.text = DateFormatterHelper.calculateAge(from: trainer.bornDate)
-    favoriteFruitTextField.text = trainer.favoriteFruitType.rawValue
+    favoriteFruitTextField.text = trainer.favoriteFruit
   }
   
   func removeTag(at indexPath: IndexPath) {
