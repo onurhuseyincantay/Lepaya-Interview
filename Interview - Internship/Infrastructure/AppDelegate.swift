@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
   
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        setupWindow()
-        return true
-    }
+  var window: UIWindow?
+  
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // Override point for customization after application launch.
+    setupWindow()
+    IQKeyboardManager.shared().isEnabled = true
+    return true
+  }
 }
 
 // MARK: - Private

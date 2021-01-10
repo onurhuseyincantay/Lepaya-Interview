@@ -12,6 +12,7 @@ final class JSONReader {
   
   enum Error: Swift.Error {
     case missingFile(String)
+    case unableToDecode(Swift.Error)
   }
   
   func decodeJsonToObject<T: Decodable>(jsonName: String) throws -> T {
@@ -22,7 +23,7 @@ final class JSONReader {
     do {
       return try JSONDecoder().decode(T.self, from: data)
     } catch {
-      throw error
+      throw Error.unableToDecode(error)
     }
   }
 }

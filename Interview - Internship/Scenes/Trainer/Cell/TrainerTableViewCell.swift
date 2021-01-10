@@ -80,7 +80,7 @@ extension TrainerTableViewCell {
     nameLabel.text = model.fullname
     emailLabel.text = model.email
     profileImageView.setCachedImage(from: model.profilePictureURL,
-                                                   placeholder: ImageHelper.personImage,
+                                                   placeholder: ImageHelper.personIcon,
                                                    isTemplate: false)
     profileImageView.layer.borderColor = model.isAvailable ? ColorHelper.trainerAvailable.cgColor : ColorHelper.trainerUnAvailable.cgColor
   }
@@ -90,9 +90,9 @@ private extension TrainerTableViewCell {
   
   func addSubviews() {
     backgroundColor = .clear
-    contentView.addSubviewWithoutConstraints(view: cardView)
-    cardView.addSubviewWithoutConstraints(view: profileImageView)
-    cardView.addSubviewWithoutConstraints(view: informationStackView)
+    contentView.addSubviewWithoutConstraints(cardView)
+    cardView.addSubviewWithoutConstraints(profileImageView)
+    cardView.addSubviewWithoutConstraints(informationStackView)
   }
   
   func setupConstraints() {
