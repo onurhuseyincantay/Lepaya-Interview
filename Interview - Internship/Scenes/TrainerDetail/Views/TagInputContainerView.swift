@@ -31,6 +31,7 @@ final class TagInputContainerView: BaseView {
     setupConstraints()
   }
   
+  // MARK: UI Components
   private let inputTextField: UITextField = {
     let textField = UITextField()
     textField.borderStyle = .roundedRect
@@ -64,6 +65,7 @@ final class TagInputContainerView: BaseView {
 }
 
 
+// MARK: - Selectors
 @objc extension TagInputContainerView {
   
   func didPressClose() {
@@ -74,6 +76,7 @@ final class TagInputContainerView: BaseView {
     delegate?.didPressAddButton(tag: inputTextField.text)
   }
 }
+
 
 // MARK: - Constraints
 private extension TagInputContainerView {

@@ -148,13 +148,13 @@ extension TrainerDetailsView: TagInputContainerViewDelegate {
   
   func didPressClose() {
     animateTagInputContainerView(isExpanding: false) { _ in
-      self.tagInputContainerView.removeFromSuperview()
+      self.removeTagInputContainerView()
     }
   }
   
   func didPressAddButton(tag: String?) {
     animateTagInputContainerView(isExpanding: false) { _ in
-      self.tagInputContainerView.removeFromSuperview()
+      self.removeTagInputContainerView()
       self.delegate?.addedTag(tag)
     }
   }
@@ -185,10 +185,16 @@ extension TrainerDetailsView {
   
   func getInformation() -> TrainerUpdateModel {
     // I wouldnt force unwrap but these values are already fılled as far as I saw from the data because of tıme limit will leave it like this.
-    TrainerUpdateModel(name: nameTextField.text!, email: emailTextField.text!, favoriteFruit: favoriteFruitTextField.text!, about: aboutTextView.text, isAvailable: self.trainerIsAvailable)
+    TrainerUpdateModel(name: nameTextField.text!,
+                       email: emailTextField.text!,
+                       favoriteFruit: favoriteFruitTextField.text!,
+                       about: aboutTextView.text,
+                       isAvailable: self.trainerIsAvailable)
   }
 }
 
+
+// MARK: - TagsContainerViewDelegate
 extension TrainerDetailsView: TagsContainerViewDelegate {
   
   func didPressAdd() {
@@ -203,6 +209,7 @@ extension TrainerDetailsView: TagsContainerViewDelegate {
 }
 
 
+// MARK: - Selectors
 @objc extension TrainerDetailsView {
   
   func didPressProfilePicture() {
@@ -212,7 +219,8 @@ extension TrainerDetailsView: TagsContainerViewDelegate {
   }
 }
 
-// MARK: - Private
+
+// MARK: - Constraints
 private extension TrainerDetailsView {
   
   func addSubviews() {
@@ -294,6 +302,11 @@ private extension TrainerDetailsView {
       ageLabel.bottomAnchor.constraint(equalTo: scrollableView.containerView.bottomAnchor, constant: -ViewTrait.defaultVerticalPadding)
     ])
   }
+}
+
+
+// MARK: - Private
+private extension TrainerDetailsView {
   
   func setupTagInputContainerView() {
     addSubviewWithoutConstraints(tagInputContainerView)
@@ -311,11 +324,17 @@ private extension TrainerDetailsView {
   }
   
   func animateTagInputContainerView(isExpanding: Bool = true,
-                                    completion: ((Bool) -> Void)? = nil)  {
+                                    completion: ((Bool) -> Void)? = nil) {
     inputContainerViewTopConstraint?.priority = isExpanding ? .defaultLow : .defaultHigh
     inputContainerViewBottomConstraint?.priority = isExpanding ? .defaultHigh : .defaultLow
     UIView.animate(withDuration: 0.5, animations: {
       self.layoutIfNeeded()
     }, completion: completion)
+  }
+  
+  func removeTagInputContainerView() {
+    tagInputContainerView.removeFromSuperview()
+    inputContainerViewTopConstraint = nil
+    inputContainerViewBottomConstraint = nil
   }
 }

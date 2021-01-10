@@ -31,11 +31,14 @@ struct Trainer: Decodable {
   }
 }
 
+
+// MARK: - Trainer + Equatable
 extension Trainer: Equatable {
-  static func ==( lhs: Trainer, rhs: Trainer) -> Bool {
+  static func == ( lhs: Trainer, rhs: Trainer) -> Bool {
     lhs.guid == rhs.guid
   }
 }
+
 
 // MARK: - Name
 struct Name: Decodable {

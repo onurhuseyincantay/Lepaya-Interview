@@ -11,9 +11,20 @@ import Foundation
 protocol TrainerDetailsViewModelProtocol {
   var trainer: Trainer { get }
   
+  /// İnitializer for the viewModel
+  /// - Parameter trainer: Trainer That is required to be managed by the viewModel
   init(trainer: Trainer)
+  
+  /// Removes a tag from the trainer
+  /// - Parameter indexPath: index of the tag to be removed
   func removeTag(at indexPath: IndexPath)
+  
+  /// adds a tag if possible and returns the successStatus
+  /// - Parameter tag: tag to be added
   func addTag(_ tag: String?) -> Bool
+  
+  /// updates a trainer with updated fields and returns the updated trainer
+  /// - Parameter model: TrainerUpdateModel
   func updateTrainer(_ model: TrainerUpdateModel) -> Trainer
 }
 
@@ -46,7 +57,7 @@ extension TrainerDetailsViewModel: TrainerDetailsViewModelProtocol {
     trainer.email = model.email
     let splittedFullName = model.name.split(separator: " ")
     trainer.name.first = String(splittedFullName.first ?? "")
-    trainer.name.last = String(splittedFullName.last ?? "")
+    trainer.name.last = splittedFullName.count == 1 ? "" : String(splittedFullName.last ?? "")
     trainer.isAvailable = model.isAvailable
     trainer.favoriteFruit = model.favoriteFruit
     return trainer

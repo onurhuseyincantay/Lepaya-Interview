@@ -15,13 +15,12 @@ final class ScrollableView: BaseView {
     addSubviews()
     setupConstraints()
   }
-  
+  // MARK: UI Components
   private let scrollView: UIScrollView = {
     let scrollView = UIScrollView()
     scrollView.bounces = false
     return scrollView
   }()
-  
   let containerView = UIView()
 }
 

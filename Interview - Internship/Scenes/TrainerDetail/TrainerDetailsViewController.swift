@@ -59,6 +59,7 @@ extension TrainerDetailsViewController: TrainerDetailsViewDelegate {
 }
 
 
+// MARK: - Private
 private extension TrainerDetailsViewController {
   
   func showDeleteActionSheet(_ indexPath: IndexPath) {

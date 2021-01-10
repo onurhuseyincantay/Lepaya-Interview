@@ -73,19 +73,21 @@ final class TrainerTableViewCell: UITableViewCell {
 }
 
 
-// MARK: Public Functions
+// MARK: - Public
 extension TrainerTableViewCell {
   
   func updateUI(with model: TrainerCellModel) {
     nameLabel.text = model.fullname
     emailLabel.text = model.email
     profileImageView.setCachedImage(from: model.profilePictureURL,
-                                                   placeholder: ImageHelper.personIcon,
-                                                   isTemplate: false)
+                                    placeholder: ImageHelper.personIcon,
+                                    isTemplate: false)
     profileImageView.layer.borderColor = model.isAvailable ? ColorHelper.trainerAvailable.cgColor : ColorHelper.trainerUnAvailable.cgColor
   }
 }
 
+
+// MARK: - Constraints
 private extension TrainerTableViewCell {
   
   func addSubviews() {

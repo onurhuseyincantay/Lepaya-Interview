@@ -25,6 +25,7 @@ final class TagsContainerView: BaseView {
     setupConstraints()
   }
   
+  // MARK: UI Components
   private let titleLabel: UILabel = {
     let label = UILabel()
     label.textColor = ColorHelper.lepayaBrandBlue
@@ -129,7 +130,7 @@ private extension TagsContainerView {
       addButton.trailingAnchor.constraint(equalTo: trailingAnchor),
       addButton.widthAnchor.constraint(equalToConstant: 50),
       addButton.heightAnchor.constraint(equalTo: addButton.widthAnchor),
-
+      
       collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
       collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
       collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),

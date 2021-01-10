@@ -12,7 +12,7 @@ import UIKit
  this has a downside if there is a lot of images normally
  we expect to have a cache limit and based on that we cache the most viewed once
  not every component because of time limit will leave it like this
-*/
+ */
 private let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
@@ -29,8 +29,9 @@ extension UIImageView {
   }
 }
 
+// MARK: - Private
 private extension UIImageView {
-
+  
   func downloadImage(from url: URL, placeholder: UIImage?, isTemplate: Bool) -> URLSessionDataTask? {
     let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
       

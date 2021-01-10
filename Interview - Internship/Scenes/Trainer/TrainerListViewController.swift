@@ -12,7 +12,7 @@ final class TrainerListViewController: UIViewController {
   
   let mainView: TrainerListView
   let viewModel: TrainerListViewModelProtocol
-   
+  
   init(view: TrainerListView, viewModel: TrainerListViewModelProtocol) {
     mainView = view
     self.viewModel = viewModel

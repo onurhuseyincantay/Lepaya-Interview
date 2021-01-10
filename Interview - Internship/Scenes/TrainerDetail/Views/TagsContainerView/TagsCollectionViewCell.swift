@@ -18,6 +18,7 @@ final class TagsCollectionViewCell: UICollectionViewCell {
     static let cornerRadius: CGFloat = 20
   }
   
+  // MARK: UI Components
   private let descriptionLabel: UILabel = {
     let label = UILabel()
     label.textAlignment = .center
@@ -36,13 +37,18 @@ final class TagsCollectionViewCell: UICollectionViewCell {
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+}
+
+// MARK: - Public
+extension TagsCollectionViewCell {
   
   func prepareCell(with tag: String) {
     descriptionLabel.text = "#\(tag)"
   }
 }
 
-// MARK: Constraints Zone
+
+// MARK: - Constraints Zone
 private extension TagsCollectionViewCell {
   
   func setupUIComponents() {

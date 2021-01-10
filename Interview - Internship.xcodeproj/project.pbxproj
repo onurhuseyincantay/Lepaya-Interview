@@ -30,7 +30,7 @@
 		8FDA999525AB16ED00E50BC5 /* TagsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA999425AB16ED00E50BC5 /* TagsCollectionViewCell.swift */; };
 		8FDA999825AB1CF300E50BC5 /* SelfSizedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA999725AB1CF300E50BC5 /* SelfSizedCollectionView.swift */; };
 		8FDA999F25AB34C700E50BC5 /* TagInputContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA999E25AB34C700E50BC5 /* TagInputContainerView.swift */; };
-		8FDA99A225AB439600E50BC5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA99A125AB439600E50BC5 /* DateFormatter.swift */; };
+		8FDA99A225AB439600E50BC5 /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA99A125AB439600E50BC5 /* DateFormatterHelper.swift */; };
 		8FDA99A525AB48C100E50BC5 /* TrainerUpdateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDA99A425AB48C100E50BC5 /* TrainerUpdateModel.swift */; };
 		979173DB8FC2EE92DAF88D7F /* Pods_Interview___Internship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB70B5F1D528079BD90AAC4 /* Pods_Interview___Internship.framework */; };
 		CA097FC0222ED98600D54ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA097FBF222ED98600D54ADA /* AppDelegate.swift */; };
@@ -79,7 +79,7 @@
 		8FDA999425AB16ED00E50BC5 /* TagsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8FDA999725AB1CF300E50BC5 /* SelfSizedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedCollectionView.swift; sourceTree = "<group>"; };
 		8FDA999E25AB34C700E50BC5 /* TagInputContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagInputContainerView.swift; sourceTree = "<group>"; };
-		8FDA99A125AB439600E50BC5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		8FDA99A125AB439600E50BC5 /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
 		8FDA99A425AB48C100E50BC5 /* TrainerUpdateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerUpdateModel.swift; sourceTree = "<group>"; };
 		8FDA99A825AB495E00E50BC5 /* IQKeyboardManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManager.framework; path = Carthage/Build/iOS/IQKeyboardManager.framework; sourceTree = "<group>"; };
 		ABB70B5F1D528079BD90AAC4 /* Pods_Interview___Internship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Interview___Internship.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +214,7 @@
 				8F96C7E125A9AD3C00B6853C /* Localizer.swift */,
 				8F96C7E725A9B11E00B6853C /* ColorHelper.swift */,
 				8F96C7EE25A9BFBF00B6853C /* ImageHelper.swift */,
-				8FDA99A125AB439600E50BC5 /* DateFormatter.swift */,
+				8FDA99A125AB439600E50BC5 /* DateFormatterHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -507,7 +507,7 @@
 				8F96C7F225A9F26400B6853C /* TrainerCellModel.swift in Sources */,
 				8F96C7D625A9AC2500B6853C /* TrainerTableViewCell.swift in Sources */,
 				CA097FD5222EDA1400D54ADA /* JSONReader.swift in Sources */,
-				8FDA99A225AB439600E50BC5 /* DateFormatter.swift in Sources */,
+				8FDA99A225AB439600E50BC5 /* DateFormatterHelper.swift in Sources */,
 				8FDA998F25AB161E00E50BC5 /* TagsFlowLayout.swift in Sources */,
 				8F96C7CB25A9A3DA00B6853C /* TrainerListViewModel.swift in Sources */,
 				8FDA999825AB1CF300E50BC5 /* SelfSizedCollectionView.swift in Sources */,
@@ -702,10 +702,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6WL23MB2S;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Interview - Internship/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lepaya.Interview---Internship";
@@ -723,10 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6WL23MB2S;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Interview - Internship/Infrastructure/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Lepaya.Interview---Internship";

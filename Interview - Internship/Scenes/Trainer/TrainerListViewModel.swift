@@ -23,7 +23,7 @@ protocol TrainerListViewModelProtocol {
 }
 
 final class TrainerListViewModel {
-  var trainerList: TrainerList!
+  private var trainerList: TrainerList!
 }
 
 

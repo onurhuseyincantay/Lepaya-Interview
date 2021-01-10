@@ -23,6 +23,7 @@ final class TrainersTests: XCTestCase {
   }
 }
 
+
 // MARK: - Tests
 extension TrainersTests {
   
