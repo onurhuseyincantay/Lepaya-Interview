@@ -21,3 +21,6 @@ extension Identifiable {
 
 // MARK: - UITableViewCell + Identifiable
 extension UITableViewCell: Identifiable { }
+
+// MARK: - UICollectionViewCell + Identifiable
+extension UICollectionViewCell: Identifiable { }

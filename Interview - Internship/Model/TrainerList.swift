@@ -17,9 +17,9 @@ struct Trainer: Decodable {
   let guid: String
   let isAvailable: Bool
   let pictureURL: URL
-  let name: Name
-  let email, about, bornDate: String
-  let tags: [String]
+  var name: Name
+  var email, about, bornDate: String
+  var tags: [String]
   let favoriteFruitType: FruitType
   // MARK: Computed Properties
   var fullName: String { "\(name.first) \(name.last)" }

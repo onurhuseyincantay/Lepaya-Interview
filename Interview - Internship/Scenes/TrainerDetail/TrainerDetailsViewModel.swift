@@ -12,6 +12,8 @@ protocol TrainerDetailsViewModelProtocol {
   var trainer: Trainer { get }
   
   init(trainer: Trainer)
+  func removeTag(at indexPath: IndexPath)
+  func addTag(_ tag: String?) -> Bool
 }
 
 final class TrainerDetailsViewModel {
@@ -25,5 +27,16 @@ final class TrainerDetailsViewModel {
 
 // MARK: - TrainerDetailsViewModelProtocol
 extension TrainerDetailsViewModel: TrainerDetailsViewModelProtocol {
-
+  
+  func removeTag(at indexPath: IndexPath) {
+    trainer.tags.remove(at: indexPath.row)
+  }
+  
+  func addTag(_ tag: String?) -> Bool {
+    guard let tag = tag else {
+      return false
+    }
+    trainer.tags.append(tag)
+    return true
+  }
 }

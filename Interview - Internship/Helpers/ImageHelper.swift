@@ -11,5 +11,7 @@ import UIKit
 enum ImageHelper {
   static let personIcon = UIImage(named: "person")
   static let emailIcon = UIImage(named: "envelope")
+  static let plusIcon = UIImage(named: "plus")
+  static let crossIcon = UIImage(named: "cross")
   static let lepayaLogo = UIImage(named: "LepayaLogo")
 }
